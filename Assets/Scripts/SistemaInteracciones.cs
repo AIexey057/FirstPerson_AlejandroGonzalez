@@ -24,10 +24,15 @@ public class SistemaInteracciones : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, distanciaDeteccion))
         {
 
-            if (hit.transform.CompareTag("Interactuable"))
+            if (hit.transform.TryGetComponent(out CajaMunicion Caja))
             {
                 interactuableActual = hit.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                  
+                }
             }
             
         }
