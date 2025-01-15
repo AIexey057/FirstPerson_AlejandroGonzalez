@@ -18,13 +18,13 @@ public class ManualArma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            system.Play(); //para las particulas
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
-            {
-                hitInfo.transform.GetComponent<Enemigo>().RecibirDanho(misDatos.danhoAtaque);
-            }
-        }
+       //if (Input.GetMouseButtonDown(0))
+        //{
+            //system.Play(); //para las particulas
+            //if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
+            //{
+               // hitInfo.transform.GetComponent<Enemigo>().RecibirDanho(misDatos.danhoAtaque);
+            //}
+        //}
     }
 }

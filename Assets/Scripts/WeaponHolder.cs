@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,11 @@ public class WeaponHolder : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             CambiarArma(2);
+            Debug.Log("pis");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            CambiarArma(3);
         }
     }
     private void CambiarArma(int nuevoIndice)
