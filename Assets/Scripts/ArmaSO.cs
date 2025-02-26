@@ -10,4 +10,5 @@ public class ArmaSO : ScriptableObject
     public float distanciaAtaque;
     public float danhoAtaque;
     public float cadenciaAtaque;
+    public GameObject bulletPrefab;
 }

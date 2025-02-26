@@ -1,33 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro; 
 
 public class Timer : MonoBehaviour
 {
-    public class GameTimer : MonoBehaviour
+    public float timeToWin = 5f; 
+    private float timer;
+    public TextMeshProUGUI timerText; 
+
+    private void Start()
     {
-        public float timeToWin = 5f; 
-        private float timer;
+        timer = timeToWin; 
+    }
 
-        private void Start()
+    private void Update()
+    {
+        timer -= Time.deltaTime; 
+
+        if (timer <= 0)
         {
-            timer = timeToWin; 
+            timer = 0; 
+            Debug.Log("Has ganado");
+            LoadVictoryScreen();
         }
 
-        private void Update()
-        {
-            timer -= Time.deltaTime; 
+        UpdateTimerUI(); 
+    }
 
-            if (timer <= 0)
-            {
-                LoadVictoryScreen(); 
-            }
-        }
-
-        private void LoadVictoryScreen()
+    private void UpdateTimerUI()
+    {
+        if (timerText != null)
         {
-            SceneManager.LoadScene("Win");
+            timerText.text = "Faltan: " + timer.ToString("F2") + "s"; 
         }
     }
+
+    private void LoadVictoryScreen()
+    {
+        SceneManager.LoadScene("Win");
     }
+}
