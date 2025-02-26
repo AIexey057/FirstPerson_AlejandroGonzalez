@@ -1898,7 +1898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5e41af40e29db764092c22c33f5fe582, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e41af40e29db764092c22c33f5fe582, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2115,6 +2115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &1898743085
 GameObject:
   m_ObjectHideFlags: 0
