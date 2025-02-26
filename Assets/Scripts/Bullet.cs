@@ -2,16 +2,34 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage = 10; 
+    public int damage = 5; 
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Bala impactó con: " + other.name);
-        Destroy(gameObject); 
+       
+        if (other.CompareTag("Enemy"))
+        {
+           
+            Health enemyHealth = other.GetComponent<Health>();
+
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+                Debug.Log("La bala ha impactado al enemigo y ha causado " + damage + " de daño.");
+            }
+
+           
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Player"))
+        {
+          
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 3f); 
     }
 }

@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 637d7d3485e02ad469332a33148641b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -79,6 +84,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8681383888852997670}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 637d7d3485e02ad469332a33148641b2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6292084252837470389}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 637d7d3485e02ad469332a33148641b2,
         type: 3}
       insertIndex: -1
@@ -164,6 +173,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.4712219, z: 1}
   m_Center: {x: 0, y: 0.9444809, z: 0}
+--- !u!114 &6292084252837470389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785623135932395145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f0e0f23d099934c8156971cea4572a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!114 &5561137945184034849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbf40e1a382e8143880302758402ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRange: 2
+  attackCooldown: 1.5
+  attackDamage: 10
   vidas: 0
   velocidadPersecucion: 3.5
   velocidadNormal: 1.5
