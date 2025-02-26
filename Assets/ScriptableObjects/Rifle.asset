@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b20f9420ba664db947d287b523c56, type: 3}
+  m_Name: Rifle
+  m_EditorClassIdentifier: 
+  balasCargador: 228
+  balasBolsa: 240
+  distanciaAtaque: 10
+  danhoAtaque: 2
+  cadenciaAtaque: 0.4
+  bulletPrefab: {fileID: 138882956975129710, guid: 2160bb97a4941f44195b0a01bd426152,
+    type: 3}
